@@ -1,0 +1,15 @@
+ast.DeclarationList(3,0)
+  ast.FunctionDefinition(3,0)[Symbol(main), []]
+    ast.StatementList(4,2)
+      ast.IfElseBranch(4,2)
+        ast.LiteralBool(4,6)[FALSE]
+        ast.StatementList(5,4)
+          ast.Call(5,4)[Symbol(printInt)]
+            ast.LiteralInt(5,15)[1]
+        ast.StatementList(7,4)
+          ast.Call(7,4)[Symbol(printInt)]
+            ast.LiteralInt(7,15)[0]
+      ast.Call(9,2)[Symbol(printInt)]
+        ast.OpExpr(9,14)[SUB]
+          ast.LiteralInt(9,13)[0]
+          ast.LiteralInt(9,15)[1]

@@ -1,0 +1,45 @@
+ast.DeclarationList(3,0)
+  ast.FunctionDefinition(3,0)[Symbol(myPrintZero), []]
+    ast.StatementList(4,2)
+      ast.Call(4,2)[Symbol(printInt)]
+        ast.LiteralInt(4,13)[0]
+  ast.FunctionDefinition(7,0)[Symbol(myPrintOne), [Symbol(a)]]
+    ast.StatementList(8,2)
+      ast.Call(8,2)[Symbol(printInt)]
+        ast.Dereference(8,13)
+          ast.Name(8,13)[a]
+  ast.FunctionDefinition(11,0)[Symbol(myPrintTwo), [Symbol(a), Symbol(b)]]
+    ast.StatementList(12,2)
+      ast.Call(12,2)[Symbol(printInt)]
+        ast.Dereference(12,13)
+          ast.Name(12,13)[a]
+      ast.Call(13,2)[Symbol(printInt)]
+        ast.Dereference(13,13)
+          ast.Name(13,13)[b]
+  ast.FunctionDefinition(16,0)[Symbol(myPrintThree), [Symbol(a), Symbol(b), Symbol(c)]]
+    ast.StatementList(17,2)
+      ast.Call(17,2)[Symbol(printInt)]
+        ast.Dereference(17,13)
+          ast.Name(17,13)[a]
+      ast.Call(18,2)[Symbol(printInt)]
+        ast.Dereference(18,13)
+          ast.Name(18,13)[b]
+      ast.Call(19,2)[Symbol(printInt)]
+        ast.Dereference(19,13)
+          ast.Name(19,13)[c]
+  ast.FunctionDefinition(22,0)[Symbol(main), []]
+    ast.StatementList(23,2)
+      ast.Call(23,2)[Symbol(myPrintZero)]
+      ast.Call(24,2)[Symbol(println)]
+      ast.Call(25,2)[Symbol(myPrintOne)]
+        ast.LiteralInt(25,15)[1]
+      ast.Call(26,2)[Symbol(println)]
+      ast.Call(27,2)[Symbol(myPrintTwo)]
+        ast.LiteralInt(27,15)[1]
+        ast.LiteralInt(27,17)[2]
+      ast.Call(28,2)[Symbol(println)]
+      ast.Call(29,2)[Symbol(myPrintThree)]
+        ast.LiteralInt(29,17)[1]
+        ast.LiteralInt(29,19)[2]
+        ast.LiteralInt(29,21)[3]
+      ast.Call(30,2)[Symbol(println)]

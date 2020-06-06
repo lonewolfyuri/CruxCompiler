@@ -1,0 +1,5 @@
+Error type-checking file.
+TypeError(16,0)[Not all code paths in function missingReturn1 return a value.]
+TypeError(22,0)[Not all code paths in function missingReturn2 return a value.]
+TypeError(30,0)[Not all code paths in function missingReturn3 return a value.]
+TypeError(45,0)[Not all code paths in function missingReturn4 return a value.]

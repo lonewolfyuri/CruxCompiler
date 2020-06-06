@@ -1,0 +1,10 @@
+ast.DeclarationList(2,0)
+  ast.VariableDeclaration(2,0)[Symbol(addi)]
+  ast.FunctionDefinition(3,0)[Symbol(main), []]
+    ast.StatementList(4,2)
+      ast.Assignment(4,2)
+        ast.Name(4,6)[addi]
+        ast.Call(4,13)[Symbol(readInt)]
+      ast.Call(5,2)[Symbol(printInt)]
+        ast.Dereference(5,13)
+          ast.Name(5,13)[addi]

@@ -1,0 +1,8 @@
+// test redefinition
+
+var a: int;
+var a: bool;
+
+func main() : void {
+  ::println();
+}

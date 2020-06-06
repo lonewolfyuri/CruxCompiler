@@ -1,0 +1,31 @@
+digraph Program {
+  node [shape=rectangle]; 
+
+  subgraph cluster_main {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %main() -> void";
+    main_n0 [label="$t0 = false"];
+    main_n1 [label="jump $t0"];
+    main_n2 [label="$t1 = 1"];
+    main_n3 [label="call %printInt ($t1)"];
+    main_n4 [label="$t2 = 0"];
+    main_n5 [label="call %printInt ($t2)"];
+    main_n6 [label="nop"];
+    main_n7 [label="$t3 = 0"];
+    main_n8 [label="$t4 = 1"];
+    main_n9 [label="$t5 = $t3 - $t4"];
+    main_n10 [label="call %printInt ($t5)"];
+    main_n0 -> main_n1;
+    main_n1 -> main_n2 [label="  True  "];
+    main_n1 -> main_n4 [label="  False  "];
+    main_n2 -> main_n3;
+    main_n3 -> main_n6;
+    main_n4 -> main_n5;
+    main_n5 -> main_n6;
+    main_n6 -> main_n7;
+    main_n7 -> main_n8;
+    main_n8 -> main_n9;
+    main_n9 -> main_n10;
+  }
+
+}

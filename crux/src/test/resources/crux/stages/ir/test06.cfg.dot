@@ -1,0 +1,84 @@
+digraph Program {
+  node [shape=rectangle]; 
+
+  subgraph cluster_myPrintZero {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %myPrintZero() -> void";
+    myPrintZero_n0 [label="$t0 = 0"];
+    myPrintZero_n1 [label="call %printInt ($t0)"];
+    myPrintZero_n0 -> myPrintZero_n1;
+  }
+
+
+  subgraph cluster_myPrintOne {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %myPrintOne($a) -> void";
+    myPrintOne_n0 [label="$t0 = $a"];
+    myPrintOne_n1 [label="call %printInt ($t0)"];
+    myPrintOne_n0 -> myPrintOne_n1;
+  }
+
+
+  subgraph cluster_myPrintTwo {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %myPrintTwo($a,$b) -> void";
+    myPrintTwo_n0 [label="$t0 = $a"];
+    myPrintTwo_n1 [label="call %printInt ($t0)"];
+    myPrintTwo_n2 [label="$t1 = $b"];
+    myPrintTwo_n3 [label="call %printInt ($t1)"];
+    myPrintTwo_n0 -> myPrintTwo_n1;
+    myPrintTwo_n1 -> myPrintTwo_n2;
+    myPrintTwo_n2 -> myPrintTwo_n3;
+  }
+
+
+  subgraph cluster_myPrintThree {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %myPrintThree($a,$b,$c) -> void";
+    myPrintThree_n0 [label="$t0 = $a"];
+    myPrintThree_n1 [label="call %printInt ($t0)"];
+    myPrintThree_n2 [label="$t1 = $b"];
+    myPrintThree_n3 [label="call %printInt ($t1)"];
+    myPrintThree_n4 [label="$t2 = $c"];
+    myPrintThree_n5 [label="call %printInt ($t2)"];
+    myPrintThree_n0 -> myPrintThree_n1;
+    myPrintThree_n1 -> myPrintThree_n2;
+    myPrintThree_n2 -> myPrintThree_n3;
+    myPrintThree_n3 -> myPrintThree_n4;
+    myPrintThree_n4 -> myPrintThree_n5;
+  }
+
+
+  subgraph cluster_main {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %main() -> void";
+    main_n0 [label="call %myPrintZero ()"];
+    main_n1 [label="call %println ()"];
+    main_n2 [label="$t0 = 1"];
+    main_n3 [label="call %myPrintOne ($t0)"];
+    main_n4 [label="call %println ()"];
+    main_n5 [label="$t1 = 1"];
+    main_n6 [label="$t2 = 2"];
+    main_n7 [label="call %myPrintTwo ($t1$t2)"];
+    main_n8 [label="call %println ()"];
+    main_n9 [label="$t3 = 1"];
+    main_n10 [label="$t4 = 2"];
+    main_n11 [label="$t5 = 3"];
+    main_n12 [label="call %myPrintThree ($t3$t4$t5)"];
+    main_n13 [label="call %println ()"];
+    main_n0 -> main_n1;
+    main_n1 -> main_n2;
+    main_n2 -> main_n3;
+    main_n3 -> main_n4;
+    main_n4 -> main_n5;
+    main_n5 -> main_n6;
+    main_n6 -> main_n7;
+    main_n7 -> main_n8;
+    main_n8 -> main_n9;
+    main_n9 -> main_n10;
+    main_n10 -> main_n11;
+    main_n11 -> main_n12;
+    main_n12 -> main_n13;
+  }
+
+}

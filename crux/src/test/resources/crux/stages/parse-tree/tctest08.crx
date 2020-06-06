@@ -1,0 +1,13 @@
+// test logical and
+
+func andInt(a:int, b:int) : bool {
+  return a and b;
+}
+
+func andBool(a:bool, b:bool) : bool {
+  return a and b;
+}
+
+func main() : void {
+  ::printBool(true);
+}

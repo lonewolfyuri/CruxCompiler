@@ -1,0 +1,2 @@
+Error type-checking file.
+TypeError(3,0)[Function foo has an error in argument in position 0: Unknown type: error.]

@@ -1,0 +1,20 @@
+ast.DeclarationList(3,0)
+  ast.FunctionDefinition(3,0)[Symbol(myInt), [Symbol(a)]]
+    ast.StatementList(4,2)
+      ast.Call(4,2)[Symbol(printInt)]
+        ast.Dereference(4,13)
+          ast.Name(4,13)[a]
+      ast.Return(5,2)
+        ast.Dereference(5,9)
+          ast.Name(5,9)[a]
+  ast.FunctionDefinition(8,0)[Symbol(myPrint), []]
+    ast.StatementList(9,2)
+      ast.Call(9,2)[Symbol(myInt)]
+        ast.LiteralInt(9,10)[7]
+      ast.Call(10,2)[Symbol(myInt)]
+        ast.LiteralInt(10,10)[8]
+      ast.Call(11,2)[Symbol(myInt)]
+        ast.LiteralInt(11,10)[9]
+  ast.FunctionDefinition(14,0)[Symbol(main), []]
+    ast.StatementList(15,2)
+      ast.Call(15,2)[Symbol(myPrint)]

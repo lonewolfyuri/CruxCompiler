@@ -1,0 +1,9 @@
+// test if-else requires boolean condition
+
+func main() : void {
+  var i:int;
+  var b:bool;
+
+  if (i) { ::printInt(7); }
+  if (b) { ::printInt(9); }
+}

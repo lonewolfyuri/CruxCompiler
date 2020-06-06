@@ -1,0 +1,26 @@
+digraph Program {
+  node [shape=rectangle]; 
+  subgraph cluster_global_var {
+    color=grey;
+    label = "Global Variable";
+    addi [label="%addi = allocate int, 1"];
+    addi; 
+  }
+
+  subgraph cluster_main {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %main() -> void";
+    main_n0 [label="$t0 = call %readInt ()"];
+    main_n1 [label="%t0 = addressAt %addi, null"];
+    main_n2 [label="store $t0, %t0"];
+    main_n3 [label="%t1 = addressAt %addi, null"];
+    main_n4 [label="$t1 = load %t1"];
+    main_n5 [label="call %printInt ($t1)"];
+    main_n0 -> main_n1;
+    main_n1 -> main_n2;
+    main_n2 -> main_n3;
+    main_n3 -> main_n4;
+    main_n4 -> main_n5;
+  }
+
+}

@@ -1,0 +1,3 @@
+Error type-checking file.
+TypeError(7,14)[cannot negate int]
+TypeError(7,2)[cannot call func(TypeList(bool)):void using TypeList(ErrorType(cannot negate int))]

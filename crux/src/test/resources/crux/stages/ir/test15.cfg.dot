@@ -1,0 +1,106 @@
+digraph Program {
+  node [shape=rectangle]; 
+
+  subgraph cluster_myTrue {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %myTrue() -> bool";
+    myTrue_n0 [label="$t0 = 1"];
+    myTrue_n1 [label="call %printInt ($t0)"];
+    myTrue_n2 [label="call %println ()"];
+    myTrue_n3 [label="$t1 = true"];
+    myTrue_n4 [label="return $t1"];
+    myTrue_n0 -> myTrue_n1;
+    myTrue_n1 -> myTrue_n2;
+    myTrue_n2 -> myTrue_n3;
+    myTrue_n3 -> myTrue_n4;
+  }
+
+
+  subgraph cluster_myFalse {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %myFalse() -> bool";
+    myFalse_n0 [label="$t0 = 0"];
+    myFalse_n1 [label="call %printInt ($t0)"];
+    myFalse_n2 [label="call %println ()"];
+    myFalse_n3 [label="$t1 = false"];
+    myFalse_n4 [label="return $t1"];
+    myFalse_n0 -> myFalse_n1;
+    myFalse_n1 -> myFalse_n2;
+    myFalse_n2 -> myFalse_n3;
+    myFalse_n3 -> myFalse_n4;
+  }
+
+
+  subgraph cluster_main {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %main() -> void";
+    main_n0 [label="$t1 = call %myTrue ()"];
+    main_n1 [label="$t0 = $t1"];
+    main_n2 [label="jump $t0"];
+    main_n3 [label="$t2 = call %myTrue ()"];
+    main_n4 [label="$t0 = $t2"];
+    main_n5 [label="nop"];
+    main_n6 [label="call %printBool ($t0)"];
+    main_n7 [label="call %println ()"];
+    main_n8 [label="$t4 = call %myFalse ()"];
+    main_n9 [label="$t3 = $t4"];
+    main_n10 [label="jump $t3"];
+    main_n11 [label="$t5 = call %myTrue ()"];
+    main_n12 [label="$t3 = $t5"];
+    main_n13 [label="nop"];
+    main_n14 [label="call %printBool ($t3)"];
+    main_n15 [label="call %println ()"];
+    main_n16 [label="$t7 = call %myTrue ()"];
+    main_n17 [label="$t6 = $t7"];
+    main_n18 [label="jump $t6"];
+    main_n19 [label="$t8 = call %myFalse ()"];
+    main_n20 [label="$t6 = $t8"];
+    main_n21 [label="nop"];
+    main_n22 [label="call %printBool ($t6)"];
+    main_n23 [label="call %println ()"];
+    main_n24 [label="$t10 = call %myFalse ()"];
+    main_n25 [label="$t9 = $t10"];
+    main_n26 [label="jump $t9"];
+    main_n27 [label="$t11 = call %myFalse ()"];
+    main_n28 [label="$t9 = $t11"];
+    main_n29 [label="nop"];
+    main_n30 [label="call %printBool ($t9)"];
+    main_n31 [label="call %println ()"];
+    main_n0 -> main_n1;
+    main_n1 -> main_n2;
+    main_n2 -> main_n3 [label="  True  "];
+    main_n2 -> main_n5 [label="  False  "];
+    main_n3 -> main_n4;
+    main_n4 -> main_n5;
+    main_n5 -> main_n6;
+    main_n6 -> main_n7;
+    main_n7 -> main_n8;
+    main_n8 -> main_n9;
+    main_n9 -> main_n10;
+    main_n10 -> main_n11 [label="  True  "];
+    main_n10 -> main_n13 [label="  False  "];
+    main_n11 -> main_n12;
+    main_n12 -> main_n13;
+    main_n13 -> main_n14;
+    main_n14 -> main_n15;
+    main_n15 -> main_n16;
+    main_n16 -> main_n17;
+    main_n17 -> main_n18;
+    main_n18 -> main_n21 [label="  False  "];
+    main_n18 -> main_n19 [label="  True  "];
+    main_n19 -> main_n20;
+    main_n20 -> main_n21;
+    main_n21 -> main_n22;
+    main_n22 -> main_n23;
+    main_n23 -> main_n24;
+    main_n24 -> main_n25;
+    main_n25 -> main_n26;
+    main_n26 -> main_n27 [label="  True  "];
+    main_n26 -> main_n29 [label="  False  "];
+    main_n27 -> main_n28;
+    main_n28 -> main_n29;
+    main_n29 -> main_n30;
+    main_n30 -> main_n31;
+  }
+
+}

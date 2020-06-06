@@ -1,0 +1,5 @@
+ast.DeclarationList(3,0)
+  ast.FunctionDefinition(3,0)[Symbol(main), []]
+    ast.StatementList(4,2)
+      ast.VariableDeclaration(4,2)[Symbol(a)]
+      ast.Call(5,2)[Symbol(println)]

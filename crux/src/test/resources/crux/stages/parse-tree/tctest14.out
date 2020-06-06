@@ -1,0 +1,15 @@
+program
+  declarationList
+    declaration
+      functionDefinition
+        parameterList
+        type
+        statementBlock
+          statementList
+            statement
+              variableDeclaration
+                type
+            statement
+              callStatement
+                callExpression
+                  expressionList

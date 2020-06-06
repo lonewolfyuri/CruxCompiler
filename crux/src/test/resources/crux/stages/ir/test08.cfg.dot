@@ -1,0 +1,40 @@
+digraph Program {
+  node [shape=rectangle]; 
+
+  subgraph cluster_myInt {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %myInt($a) -> int";
+    myInt_n0 [label="$t0 = $a"];
+    myInt_n1 [label="call %printInt ($t0)"];
+    myInt_n2 [label="$t1 = $a"];
+    myInt_n3 [label="return $t1"];
+    myInt_n0 -> myInt_n1;
+    myInt_n1 -> myInt_n2;
+    myInt_n2 -> myInt_n3;
+  }
+
+
+  subgraph cluster_myPrint {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %myPrint() -> void";
+    myPrint_n0 [label="$t0 = 7"];
+    myPrint_n1 [label="$t1 = call %myInt ($t0)"];
+    myPrint_n2 [label="$t2 = 8"];
+    myPrint_n3 [label="$t3 = call %myInt ($t2)"];
+    myPrint_n4 [label="$t4 = 9"];
+    myPrint_n5 [label="$t5 = call %myInt ($t4)"];
+    myPrint_n0 -> myPrint_n1;
+    myPrint_n1 -> myPrint_n2;
+    myPrint_n2 -> myPrint_n3;
+    myPrint_n3 -> myPrint_n4;
+    myPrint_n4 -> myPrint_n5;
+  }
+
+
+  subgraph cluster_main {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %main() -> void";
+    main_n0 [label="call %myPrint ()"];
+  }
+
+}

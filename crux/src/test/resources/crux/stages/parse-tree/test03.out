@@ -1,0 +1,14 @@
+program
+  declarationList
+    declaration
+      variableDeclaration
+        type
+    declaration
+      variableDeclaration
+        type
+    declaration
+      variableDeclaration
+        type
+    declaration
+      variableDeclaration
+        type

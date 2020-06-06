@@ -1,0 +1,5 @@
+ast.DeclarationList(3,0)
+  ast.FunctionDefinition(3,0)[Symbol(main), []]
+    ast.StatementList(4,2)
+      ast.Return(4,2)
+        ast.Call(4,9)[Symbol(main)]

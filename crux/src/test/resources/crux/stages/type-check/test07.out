@@ -1,0 +1,5 @@
+Error type-checking file.
+TypeError(8,11)[cannot compare bool with bool]
+TypeError(8,2)[Function compareBool returns bool not ErrorType(cannot compare bool with bool).]
+TypeError(12,11)[cannot compare int with bool]
+TypeError(12,2)[Function compareIntBool returns bool not ErrorType(cannot compare int with bool).]

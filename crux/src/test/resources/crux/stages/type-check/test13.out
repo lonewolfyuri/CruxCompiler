@@ -1,0 +1,3 @@
+Error type-checking file.
+TypeError(9,2)[cannot call func(TypeList(int)):void using TypeList(array[4,int])]
+TypeError(15,2)[cannot call func(TypeList(int)):void using TypeList(array[9,int])]

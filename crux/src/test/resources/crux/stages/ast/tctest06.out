@@ -1,0 +1,47 @@
+ast.DeclarationList(3,0)
+  ast.FunctionDefinition(3,0)[Symbol(addInts), [Symbol(a), Symbol(b)]]
+    ast.StatementList(4,2)
+      ast.Return(4,2)
+        ast.OpExpr(4,11)[ADD]
+          ast.Dereference(4,9)
+            ast.Name(4,9)[a]
+          ast.Dereference(4,13)
+            ast.Name(4,13)[b]
+  ast.FunctionDefinition(7,0)[Symbol(addBools), [Symbol(a), Symbol(b)]]
+    ast.StatementList(8,2)
+      ast.Return(8,2)
+        ast.OpExpr(8,11)[ADD]
+          ast.Dereference(8,9)
+            ast.Name(8,9)[a]
+          ast.Dereference(8,13)
+            ast.Name(8,13)[b]
+  ast.FunctionDefinition(11,0)[Symbol(addIntBool), [Symbol(a), Symbol(b)]]
+    ast.StatementList(12,2)
+      ast.Return(12,2)
+        ast.OpExpr(12,11)[ADD]
+          ast.Dereference(12,9)
+            ast.Name(12,9)[a]
+          ast.Dereference(12,13)
+            ast.Name(12,13)[b]
+  ast.FunctionDefinition(15,0)[Symbol(main), []]
+    ast.StatementList(16,2)
+      ast.Call(16,2)[Symbol(printInt)]
+        ast.LiteralInt(16,13)[7]
+  ast.FunctionDefinition(19,0)[Symbol(addWithError), []]
+    ast.StatementList(20,2)
+      ast.VariableDeclaration(20,2)[Symbol(a)]
+      ast.Assignment(21,2)
+        ast.Name(21,6)[a]
+        ast.OpExpr(21,36)[ADD]
+          ast.OpExpr(21,32)[ADD]
+            ast.OpExpr(21,28)[ADD]
+              ast.OpExpr(21,20)[ADD]
+                ast.OpExpr(21,16)[ADD]
+                  ast.OpExpr(21,12)[ADD]
+                    ast.LiteralInt(21,10)[1]
+                    ast.LiteralInt(21,14)[2]
+                  ast.LiteralInt(21,18)[3]
+                ast.LiteralBool(21,22)[FALSE]
+              ast.LiteralInt(21,30)[4]
+            ast.LiteralInt(21,34)[5]
+          ast.LiteralInt(21,38)[6]

@@ -1,0 +1,2 @@
+Error type-checking file.
+TypeError(4,2)[Variable a has invalid type void.]

@@ -1,0 +1,54 @@
+digraph Program {
+  node [shape=rectangle]; 
+
+  subgraph cluster_fib {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %fib($a) -> int";
+    fib_n0 [label="$t0 = $a"];
+    fib_n1 [label="$t1 = 0"];
+    fib_n2 [label="$t2 = $t0 <= $t1"];
+    fib_n3 [label="jump $t2"];
+    fib_n4 [label="$t3 = 1"];
+    fib_n5 [label="return $t3"];
+    fib_n6 [label="nop"];
+    fib_n7 [label="$t4 = $a"];
+    fib_n8 [label="$t5 = 1"];
+    fib_n9 [label="$t6 = $t4 - $t5"];
+    fib_n10 [label="$t7 = call %fib ($t6)"];
+    fib_n11 [label="$t8 = $a"];
+    fib_n12 [label="$t9 = 2"];
+    fib_n13 [label="$t10 = $t8 - $t9"];
+    fib_n14 [label="$t11 = call %fib ($t10)"];
+    fib_n15 [label="$t12 = $t7 + $t11"];
+    fib_n16 [label="return $t12"];
+    fib_n0 -> fib_n1;
+    fib_n1 -> fib_n2;
+    fib_n2 -> fib_n3;
+    fib_n3 -> fib_n6 [label="  False  "];
+    fib_n3 -> fib_n4 [label="  True  "];
+    fib_n4 -> fib_n5;
+    fib_n5 -> fib_n6;
+    fib_n6 -> fib_n7;
+    fib_n7 -> fib_n8;
+    fib_n8 -> fib_n9;
+    fib_n9 -> fib_n10;
+    fib_n10 -> fib_n11;
+    fib_n11 -> fib_n12;
+    fib_n12 -> fib_n13;
+    fib_n13 -> fib_n14;
+    fib_n14 -> fib_n15;
+    fib_n15 -> fib_n16;
+  }
+
+
+  subgraph cluster_main {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %main() -> void";
+    main_n0 [label="$t0 = 5"];
+    main_n1 [label="$t1 = call %fib ($t0)"];
+    main_n2 [label="call %printInt ($t1)"];
+    main_n0 -> main_n1;
+    main_n1 -> main_n2;
+  }
+
+}

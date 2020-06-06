@@ -1,0 +1,9 @@
+ast.DeclarationList(3,0)
+  ast.ArrayDeclaration(3,0)[Symbol(x)]
+  ast.FunctionDefinition(5,0)[Symbol(main), []]
+    ast.StatementList(6,2)
+      ast.Call(6,2)[Symbol(printInt)]
+        ast.Dereference(6,13)
+          ast.ArrayAccess(6,15)
+            ast.Name(6,13)[x]
+            ast.LiteralInt(6,15)[2]

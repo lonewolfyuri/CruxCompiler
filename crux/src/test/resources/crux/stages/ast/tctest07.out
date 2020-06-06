@@ -1,0 +1,29 @@
+ast.DeclarationList(3,0)
+  ast.FunctionDefinition(3,0)[Symbol(compareInt), [Symbol(a), Symbol(b)]]
+    ast.StatementList(4,2)
+      ast.Return(4,2)
+        ast.OpExpr(4,11)[GT]
+          ast.Dereference(4,9)
+            ast.Name(4,9)[a]
+          ast.Dereference(4,13)
+            ast.Name(4,13)[b]
+  ast.FunctionDefinition(7,0)[Symbol(compareBool), [Symbol(a), Symbol(b)]]
+    ast.StatementList(8,2)
+      ast.Return(8,2)
+        ast.OpExpr(8,11)[GT]
+          ast.Dereference(8,9)
+            ast.Name(8,9)[a]
+          ast.Dereference(8,13)
+            ast.Name(8,13)[b]
+  ast.FunctionDefinition(11,0)[Symbol(compareIntBool), [Symbol(a), Symbol(b)]]
+    ast.StatementList(12,2)
+      ast.Return(12,2)
+        ast.OpExpr(12,11)[GT]
+          ast.Dereference(12,9)
+            ast.Name(12,9)[a]
+          ast.Dereference(12,13)
+            ast.Name(12,13)[b]
+  ast.FunctionDefinition(15,0)[Symbol(main), []]
+    ast.StatementList(16,2)
+      ast.Call(16,2)[Symbol(printBool)]
+        ast.LiteralBool(16,14)[FALSE]

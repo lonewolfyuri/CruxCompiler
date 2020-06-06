@@ -1,0 +1,34 @@
+ast.DeclarationList(3,0)
+  ast.VariableDeclaration(3,0)[Symbol(i)]
+  ast.VariableDeclaration(4,0)[Symbol(j)]
+  ast.VariableDeclaration(5,0)[Symbol(k)]
+  ast.FunctionDefinition(7,0)[Symbol(main), []]
+    ast.StatementList(8,2)
+      ast.Call(8,2)[Symbol(printBool)]
+        ast.OpExpr(8,16)[LOGIC_AND]
+          ast.Dereference(8,14)
+            ast.Name(8,14)[i]
+          ast.Dereference(8,20)
+            ast.Name(8,20)[j]
+      ast.Call(9,2)[Symbol(printBool)]
+        ast.OpExpr(9,16)[LOGIC_OR]
+          ast.Dereference(9,14)
+            ast.Name(9,14)[i]
+          ast.Dereference(9,19)
+            ast.Name(9,19)[j]
+      ast.Call(10,2)[Symbol(printBool)]
+        ast.OpExpr(10,14)[LOGIC_NOT]
+          ast.OpExpr(10,21)[LOGIC_AND]
+            ast.Dereference(10,19)
+              ast.Name(10,19)[i]
+            ast.Dereference(10,25)
+              ast.Name(10,25)[j]
+      ast.Call(11,2)[Symbol(printBool)]
+        ast.OpExpr(11,22)[LOGIC_OR]
+          ast.OpExpr(11,16)[LOGIC_AND]
+            ast.Dereference(11,14)
+              ast.Name(11,14)[i]
+            ast.Dereference(11,20)
+              ast.Name(11,20)[j]
+          ast.Dereference(11,25)
+            ast.Name(11,25)[k]

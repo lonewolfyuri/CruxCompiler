@@ -1,0 +1,9 @@
+// test while-loop requires boolean condition
+
+func main() : void {
+  var i:int;
+  var b:bool;
+
+  while (i) { ::printInt(7); }
+  while (b) { ::printInt(9); }
+}

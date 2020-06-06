@@ -1,0 +1,29 @@
+ast.DeclarationList(3,0)
+  ast.FunctionDefinition(3,0)[Symbol(fib), [Symbol(a)]]
+    ast.StatementList(4,2)
+      ast.IfElseBranch(4,2)
+        ast.OpExpr(4,8)[LE]
+          ast.Dereference(4,6)
+            ast.Name(4,6)[a]
+          ast.LiteralInt(4,11)[0]
+        ast.StatementList(4,16)
+          ast.Return(4,16)
+            ast.LiteralInt(4,23)[1]
+        ast.StatementList(4,2)
+      ast.Return(5,2)
+        ast.OpExpr(5,20)[ADD]
+          ast.Call(5,9)[Symbol(fib)]
+            ast.OpExpr(5,16)[SUB]
+              ast.Dereference(5,15)
+                ast.Name(5,15)[a]
+              ast.LiteralInt(5,17)[1]
+          ast.Call(5,22)[Symbol(fib)]
+            ast.OpExpr(5,29)[SUB]
+              ast.Dereference(5,28)
+                ast.Name(5,28)[a]
+              ast.LiteralInt(5,30)[2]
+  ast.FunctionDefinition(8,0)[Symbol(main), []]
+    ast.StatementList(9,2)
+      ast.Call(9,2)[Symbol(printInt)]
+        ast.Call(9,13)[Symbol(fib)]
+          ast.LiteralInt(9,19)[5]

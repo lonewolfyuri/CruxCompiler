@@ -1,0 +1,17 @@
+ast.DeclarationList(3,0)
+  ast.FunctionDefinition(3,0)[Symbol(myInt), [Symbol(a)]]
+    ast.StatementList(4,2)
+      ast.Return(4,2)
+        ast.Dereference(4,9)
+          ast.Name(4,9)[a]
+  ast.FunctionDefinition(7,0)[Symbol(myIntError), [Symbol(a)]]
+    ast.StatementList(8,2)
+      ast.Return(8,2)
+        ast.Dereference(8,9)
+          ast.Name(8,9)[a]
+  ast.FunctionDefinition(11,0)[Symbol(main), []]
+    ast.StatementList(12,2)
+      ast.Call(12,2)[Symbol(myInt)]
+        ast.LiteralInt(12,10)[7]
+      ast.Call(13,2)[Symbol(myIntError)]
+        ast.LiteralBool(13,15)[TRUE]

@@ -1,0 +1,13 @@
+ast.DeclarationList(3,0)
+  ast.FunctionDefinition(3,0)[Symbol(main), []]
+    ast.StatementList(4,2)
+      ast.VariableDeclaration(4,2)[Symbol(i)]
+      ast.VariableDeclaration(5,2)[Symbol(b)]
+      ast.Call(7,2)[Symbol(printBool)]
+        ast.OpExpr(7,14)[LOGIC_NOT]
+          ast.Dereference(7,18)
+            ast.Name(7,18)[i]
+      ast.Call(8,2)[Symbol(printBool)]
+        ast.OpExpr(8,14)[LOGIC_NOT]
+          ast.Dereference(8,18)
+            ast.Name(8,18)[b]

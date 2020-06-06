@@ -1,0 +1,67 @@
+digraph Program {
+  node [shape=rectangle]; 
+  subgraph cluster_global_var {
+    color=grey;
+    label = "Global Variable";
+    a [label="%a = allocate int, 1"];
+    a; 
+  }
+
+  subgraph cluster_main {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %main() -> void";
+    main_n0 [label="$t0 = 9"];
+    main_n1 [label="%t0 = addressAt %a, null"];
+    main_n2 [label="store $t0, %t0"];
+    main_n3 [label="%t1 = addressAt %a, null"];
+    main_n4 [label="$t1 = load %t1"];
+    main_n5 [label="$t2 = 0"];
+    main_n6 [label="$t3 = $t1 > $t2"];
+    main_n7 [label="jump $t3"];
+    main_n8 [label="%t2 = addressAt %a, null"];
+    main_n9 [label="$t4 = load %t2"];
+    main_n10 [label="call %printInt ($t4)"];
+    main_n11 [label="call %println ()"];
+    main_n12 [label="%t3 = addressAt %a, null"];
+    main_n13 [label="$t5 = load %t3"];
+    main_n14 [label="$t6 = 1"];
+    main_n15 [label="$t7 = $t5 - $t6"];
+    main_n16 [label="%t4 = addressAt %a, null"];
+    main_n17 [label="store $t7, %t4"];
+    main_n18 [label="nop"];
+    main_n19 [label="$t8 = 0"];
+    main_n20 [label="$t9 = 5"];
+    main_n21 [label="$t10 = $t8 - $t9"];
+    main_n22 [label="call %printInt ($t10)"];
+    main_n23 [label="%t5 = addressAt %a, null"];
+    main_n24 [label="$t11 = load %t5"];
+    main_n25 [label="call %printInt ($t11)"];
+    main_n0 -> main_n1;
+    main_n1 -> main_n2;
+    main_n2 -> main_n3;
+    main_n3 -> main_n4;
+    main_n4 -> main_n5;
+    main_n5 -> main_n6;
+    main_n6 -> main_n7;
+    main_n7 -> main_n8 [label="  True  "];
+    main_n7 -> main_n18 [label="  False  "];
+    main_n8 -> main_n9;
+    main_n9 -> main_n10;
+    main_n10 -> main_n11;
+    main_n11 -> main_n12;
+    main_n12 -> main_n13;
+    main_n13 -> main_n14;
+    main_n14 -> main_n15;
+    main_n15 -> main_n16;
+    main_n16 -> main_n17;
+    main_n17 -> main_n3;
+    main_n18 -> main_n19;
+    main_n19 -> main_n20;
+    main_n20 -> main_n21;
+    main_n21 -> main_n22;
+    main_n22 -> main_n23;
+    main_n23 -> main_n24;
+    main_n24 -> main_n25;
+  }
+
+}

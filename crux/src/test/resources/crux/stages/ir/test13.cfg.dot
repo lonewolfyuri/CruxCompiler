@@ -1,0 +1,49 @@
+digraph Program {
+  node [shape=rectangle]; 
+
+  subgraph cluster_blt {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %blt($a,$b) -> bool";
+    blt_n0 [label="$t0 = $a"];
+    blt_n1 [label="$t1 = $b"];
+    blt_n2 [label="$t2 = $t0 < $t1"];
+    blt_n3 [label="return $t2"];
+    blt_n0 -> blt_n1;
+    blt_n1 -> blt_n2;
+    blt_n2 -> blt_n3;
+  }
+
+
+  subgraph cluster_main {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %main() -> void";
+    main_n0 [label="$t0 = 1"];
+    main_n1 [label="$t1 = 2"];
+    main_n2 [label="$t2 = call %blt ($t0$t1)"];
+    main_n3 [label="call %printBool ($t2)"];
+    main_n4 [label="call %println ()"];
+    main_n5 [label="$t3 = 2"];
+    main_n6 [label="$t4 = 1"];
+    main_n7 [label="$t5 = call %blt ($t3$t4)"];
+    main_n8 [label="call %printBool ($t5)"];
+    main_n9 [label="call %println ()"];
+    main_n10 [label="$t6 = 1"];
+    main_n11 [label="$t7 = 1"];
+    main_n12 [label="$t8 = call %blt ($t6$t7)"];
+    main_n13 [label="call %printBool ($t8)"];
+    main_n0 -> main_n1;
+    main_n1 -> main_n2;
+    main_n2 -> main_n3;
+    main_n3 -> main_n4;
+    main_n4 -> main_n5;
+    main_n5 -> main_n6;
+    main_n6 -> main_n7;
+    main_n7 -> main_n8;
+    main_n8 -> main_n9;
+    main_n9 -> main_n10;
+    main_n10 -> main_n11;
+    main_n11 -> main_n12;
+    main_n12 -> main_n13;
+  }
+
+}

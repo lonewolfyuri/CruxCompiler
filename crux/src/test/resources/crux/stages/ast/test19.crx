@@ -1,0 +1,12 @@
+// scoped usage
+var a: int;
+
+func main() : void {
+  if (false) {
+    if (true) {
+      while (true) {
+        let a = 7;
+      }
+    }
+  }
+}

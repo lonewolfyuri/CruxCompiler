@@ -1,0 +1,2 @@
+Error type-checking file.
+TypeError(7,2)[WhileLoop requires bool condition not int.]

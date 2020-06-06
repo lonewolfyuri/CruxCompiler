@@ -1,0 +1,2 @@
+Error type-checking file.
+TypeError(8,2)[Function myIntError returns int not bool.]

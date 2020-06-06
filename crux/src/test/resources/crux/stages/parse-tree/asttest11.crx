@@ -1,0 +1,8 @@
+// test presence of built-in functions
+
+func main() : void {
+  ::printInt(7);
+  ::printBool(true);
+  ::println();
+  ::readInt();
+}

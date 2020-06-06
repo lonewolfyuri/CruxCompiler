@@ -1,0 +1,7 @@
+// test literal
+
+func main() : void {
+  let a = 4;
+  let b = true;
+  let c = false;
+}

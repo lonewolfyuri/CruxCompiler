@@ -1,0 +1,12 @@
+digraph Program {
+  node [shape=rectangle]; 
+
+  subgraph cluster_main {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %main() -> void";
+    main_n0 [label="$t0 = 42"];
+    main_n1 [label="call %printInt ($t0)"];
+    main_n0 -> main_n1;
+  }
+
+}

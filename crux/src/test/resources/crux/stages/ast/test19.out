@@ -1,0 +1,18 @@
+ast.DeclarationList(2,0)
+  ast.VariableDeclaration(2,0)[Symbol(a)]
+  ast.FunctionDefinition(4,0)[Symbol(main), []]
+    ast.StatementList(5,2)
+      ast.IfElseBranch(5,2)
+        ast.LiteralBool(5,6)[FALSE]
+        ast.StatementList(6,4)
+          ast.IfElseBranch(6,4)
+            ast.LiteralBool(6,8)[TRUE]
+            ast.StatementList(7,6)
+              ast.WhileLoop(7,6)
+                ast.LiteralBool(7,13)[TRUE]
+                ast.StatementList(8,8)
+                  ast.Assignment(8,8)
+                    ast.Name(8,12)[a]
+                    ast.LiteralInt(8,16)[7]
+            ast.StatementList(6,4)
+        ast.StatementList(5,2)

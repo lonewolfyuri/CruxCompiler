@@ -1,0 +1,21 @@
+digraph Program {
+  node [shape=rectangle]; 
+
+  subgraph cluster_myInt {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %myInt() -> int";
+    myInt_n0 [label="$t0 = call %readInt ()"];
+    myInt_n1 [label="return $t0"];
+    myInt_n0 -> myInt_n1;
+  }
+
+
+  subgraph cluster_main {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %main() -> void";
+    main_n0 [label="$t0 = call %myInt ()"];
+    main_n1 [label="call %printInt ($t0)"];
+    main_n0 -> main_n1;
+  }
+
+}

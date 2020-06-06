@@ -1,0 +1,5 @@
+Error type-checking file.
+TypeError(3,0)[Function foo has a void argument in position 0.]
+TypeError(4,15)[cannot deref Address(void)]
+TypeError(4,9)[cannot call func(TypeList(void)):void using TypeList(ErrorType(cannot deref Address(void)))]
+TypeError(4,2)[Function foo returns void not ErrorType(cannot call func(TypeList(void)):void using TypeList(ErrorType(cannot deref Address(void)))).]

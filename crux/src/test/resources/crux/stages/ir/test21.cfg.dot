@@ -1,0 +1,80 @@
+digraph Program {
+  node [shape=rectangle]; 
+  subgraph cluster_global_var {
+    color=grey;
+    label = "Global Variable";
+    a [label="%a = allocate int, 1"];
+    a; 
+  }
+
+  subgraph cluster_shadowWithParam {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %shadowWithParam($a) -> void";
+    shadowWithParam_n0 [label="$t0 = 7"];
+    shadowWithParam_n1 [label="$a = $t0"];
+    shadowWithParam_n2 [label="$t1 = $a"];
+    shadowWithParam_n3 [label="call %printInt ($t1)"];
+    shadowWithParam_n4 [label="call %println ()"];
+    shadowWithParam_n0 -> shadowWithParam_n1;
+    shadowWithParam_n1 -> shadowWithParam_n2;
+    shadowWithParam_n2 -> shadowWithParam_n3;
+    shadowWithParam_n3 -> shadowWithParam_n4;
+  }
+
+
+  subgraph cluster_shadowWithLocal {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %shadowWithLocal() -> void";
+    shadowWithLocal_n0 [label="$t0 = 9"];
+    shadowWithLocal_n1 [label="$a = $t0"];
+    shadowWithLocal_n2 [label="$t1 = $a"];
+    shadowWithLocal_n3 [label="call %printInt ($t1)"];
+    shadowWithLocal_n4 [label="call %println ()"];
+    shadowWithLocal_n0 -> shadowWithLocal_n1;
+    shadowWithLocal_n1 -> shadowWithLocal_n2;
+    shadowWithLocal_n2 -> shadowWithLocal_n3;
+    shadowWithLocal_n3 -> shadowWithLocal_n4;
+  }
+
+
+  subgraph cluster_main {
+    style=filled;color=lightgrey;node [style=filled, color=white];
+    label="function %main() -> void";
+    main_n0 [label="$t0 = 5"];
+    main_n1 [label="%t0 = addressAt %a, null"];
+    main_n2 [label="store $t0, %t0"];
+    main_n3 [label="%t1 = addressAt %a, null"];
+    main_n4 [label="$t1 = load %t1"];
+    main_n5 [label="call %printInt ($t1)"];
+    main_n6 [label="call %println ()"];
+    main_n7 [label="$t2 = 8"];
+    main_n8 [label="call %shadowWithParam ($t2)"];
+    main_n9 [label="%t2 = addressAt %a, null"];
+    main_n10 [label="$t3 = load %t2"];
+    main_n11 [label="call %printInt ($t3)"];
+    main_n12 [label="call %println ()"];
+    main_n13 [label="call %shadowWithLocal ()"];
+    main_n14 [label="%t3 = addressAt %a, null"];
+    main_n15 [label="$t4 = load %t3"];
+    main_n16 [label="call %printInt ($t4)"];
+    main_n17 [label="call %println ()"];
+    main_n0 -> main_n1;
+    main_n1 -> main_n2;
+    main_n2 -> main_n3;
+    main_n3 -> main_n4;
+    main_n4 -> main_n5;
+    main_n5 -> main_n6;
+    main_n6 -> main_n7;
+    main_n7 -> main_n8;
+    main_n8 -> main_n9;
+    main_n9 -> main_n10;
+    main_n10 -> main_n11;
+    main_n11 -> main_n12;
+    main_n12 -> main_n13;
+    main_n13 -> main_n14;
+    main_n14 -> main_n15;
+    main_n15 -> main_n16;
+    main_n16 -> main_n17;
+  }
+
+}

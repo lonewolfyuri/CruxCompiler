@@ -1,0 +1,76 @@
+ast.DeclarationList(3,0)
+  ast.FunctionDefinition(3,0)[Symbol(validReturn1), [Symbol(a)]]
+    ast.StatementList(4,2)
+      ast.Return(4,2)
+        ast.Dereference(4,9)
+          ast.Name(4,9)[a]
+  ast.FunctionDefinition(7,0)[Symbol(validReturn2), [Symbol(a)]]
+    ast.StatementList(8,2)
+      ast.IfElseBranch(8,2)
+        ast.LiteralBool(8,6)[TRUE]
+        ast.StatementList(9,4)
+          ast.Assignment(9,4)
+            ast.Name(9,8)[a]
+            ast.LiteralInt(9,12)[3]
+        ast.StatementList(11,4)
+          ast.Return(11,4)
+            ast.Dereference(11,11)
+              ast.Name(11,11)[a]
+      ast.Return(13,2)
+        ast.LiteralInt(13,9)[4]
+  ast.FunctionDefinition(16,0)[Symbol(missingReturn1), [Symbol(a)]]
+    ast.StatementList(17,2)
+      ast.IfElseBranch(17,2)
+        ast.LiteralBool(17,6)[TRUE]
+        ast.StatementList(18,4)
+          ast.Return(18,4)
+            ast.Dereference(18,11)
+              ast.Name(18,11)[a]
+        ast.StatementList(17,2)
+  ast.FunctionDefinition(22,0)[Symbol(missingReturn2), [Symbol(a)]]
+    ast.StatementList(23,2)
+      ast.IfElseBranch(23,2)
+        ast.LiteralBool(23,6)[TRUE]
+        ast.StatementList(24,4)
+          ast.Return(24,4)
+            ast.Dereference(24,11)
+              ast.Name(24,11)[a]
+        ast.StatementList(26,4)
+          ast.Assignment(26,4)
+            ast.Name(26,8)[a]
+            ast.LiteralInt(26,12)[3]
+  ast.FunctionDefinition(30,0)[Symbol(missingReturn3), [Symbol(a)]]
+    ast.StatementList(31,2)
+      ast.IfElseBranch(31,2)
+        ast.LiteralBool(31,6)[FALSE]
+        ast.StatementList(32,4)
+          ast.Assignment(32,4)
+            ast.Name(32,8)[a]
+            ast.LiteralInt(32,12)[3]
+        ast.StatementList(34,4)
+          ast.Return(34,4)
+            ast.Dereference(34,11)
+              ast.Name(34,11)[a]
+  ast.FunctionDefinition(38,0)[Symbol(validReturn3), [Symbol(a)]]
+    ast.StatementList(39,2)
+      ast.WhileLoop(39,2)
+        ast.LiteralBool(39,9)[FALSE]
+        ast.StatementList(40,4)
+          ast.Return(40,4)
+            ast.Dereference(40,11)
+              ast.Name(40,11)[a]
+      ast.Return(42,2)
+        ast.Dereference(42,9)
+          ast.Name(42,9)[a]
+  ast.FunctionDefinition(45,0)[Symbol(missingReturn4), [Symbol(a)]]
+    ast.StatementList(46,2)
+      ast.WhileLoop(46,2)
+        ast.LiteralBool(46,8)[TRUE]
+        ast.StatementList(47,4)
+          ast.Return(47,4)
+            ast.Dereference(47,11)
+              ast.Name(47,11)[a]
+  ast.FunctionDefinition(51,0)[Symbol(main), []]
+    ast.StatementList(52,2)
+      ast.Call(52,2)[Symbol(printInt)]
+        ast.LiteralInt(52,13)[8]
